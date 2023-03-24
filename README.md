@@ -2,7 +2,10 @@ Carosello Mono Array
 ===
 Dato un array contenente una lista di cinque immagini, creare un carosello come nello screenshot allegato.
 
-<center><img src='./carosello_mono_array.png' style='width: 75%'></center>
+<center><img src='./carosello_mono_array.png' style='width: 75%; margin: 0 auto;'></center>
+[(/carosello_mono_array.png)]
+
+
 
 **BONUS 1:**
 
