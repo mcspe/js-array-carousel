@@ -4,22 +4,27 @@ const msThumbs = document.querySelector('.ms-thumbnails');
 const msBtnFwd = document.querySelector('.ms-slider-controller.forward');
 const msBtnBwd = document.querySelector('.ms-slider-controller.backward');
 const msBtnCss = document.querySelector('.ms-wrapper .css-btn');
-const basicCss = "http://127.0.0.1:5500/css/style.css";
-const bonusCss = "http://127.0.0.1:5500/css/style-bonus.css";
+const basicCss = "./css/style.css";
+const bonusCss = "./css/style-bonus.css";
+let displayBonus = false;
 
 const cssLink = document.getElementsByTagName('link');
 
+cssLink[3].href = basicCss;
+
 msBtnCss.addEventListener('click', function(){
-  if (cssLink[3].href === basicCss){
+  if (!displayBonus){
     msBtnCss.innerHTML = 'display basic style';
     cssLink[3].href = bonusCss;
+    displayBonus = !displayBonus;
   } else{
     msBtnCss.innerHTML = 'display bonus style';
     cssLink[3].href = basicCss;
+    displayBonus = !displayBonus;
   }
 });
 
-console.log(cssLink[3], msBtnCss, (cssLink[3].href === basicCss));
+console.log(cssLink[3], msBtnCss);
 
 let imgCounter = 0;
 
