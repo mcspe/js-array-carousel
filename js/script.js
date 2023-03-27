@@ -101,11 +101,12 @@ msBtnBwd.addEventListener('click', function(){
 
 for (let i = 0; i < sliderThumb.length; i++){
   sliderThumb[i].addEventListener('click', function(){
-    imgCounter = i;
-    for(let j = 0; j < sliderThumb.length; j++){
-      sliderArr[j].classList.add('d-none');
-      sliderThumb[j].classList.remove('active');
+    if (imgCounter != i){
+      sliderArr[imgCounter].classList.add('d-none');
+      sliderThumb[imgCounter].classList.remove('active');
     }
+    imgCounter = i;
+    
     sliderArr[i].classList.remove('d-none');
     sliderThumb[i].classList.add('active');    
   });
